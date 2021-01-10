@@ -1,5 +1,5 @@
 aiofiles
-aiohttp==3.6.2
+aiohttp==3.7.3
 beautifulsoup4==4.9.1
 bs4==0.0.1
 coffeehouse==2.2.2
@@ -12,6 +12,7 @@ gpytranslate
 gtts==2.1.1
 htmlement==1.0.0
 httplib2==0.15.0
+nekobin==0.0.2
 mega.py==1.0.8
 pafy==0.5.5
 pathlib==1.0.1
@@ -40,4 +41,5 @@ TgCrypto
 timeago
 tracemoepy
 typing==3.7.4.1
+ujson==4.0.1
 uptime

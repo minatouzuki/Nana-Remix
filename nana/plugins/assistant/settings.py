@@ -128,9 +128,6 @@ async def reboot_bot(client, query):
     )
 
 
-# Back button
-
-
 @setbot.on_callback_query(dynamic_data_filter('back'))
 async def back(_, message):
     text = await get_text_settings()

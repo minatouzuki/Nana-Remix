@@ -10,7 +10,6 @@ from pyrogram import filters
 from nana import COMMAND_PREFIXES, app, edit_or_reply, AdminSettings
 from nana.utils.parser import mention_markdown
 from nana.utils.aiohttp_helper import AioHttp
-from nekobin import NekoBin
 
 __MODULE__ = 'Devs'
 __HELP__ = """
@@ -243,20 +242,6 @@ async def terminal(client, message):
                 teks,
             ),
         )
-
-
-@app.on_message(
-    filters.user(AdminSettings) & filters.command(['log'], COMMAND_PREFIXES),
-)
-async def log(_, message):
-    nekobin = NekoBin()
-    with open('nana/logs/error.txt') as f:
-        data = await nekobin.nekofy(f.read())
-    await edit_or_reply(
-        message,
-        text=f'`Your recent logs stored are here:`\n{data.raw}',
-        disable_web_page_preview=True,
-    )
 
 
 @app.on_message(

@@ -1,5 +1,3 @@
-import random
-
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineQueryResultArticle
 from pyrogram.types import InputTextMessageContent
@@ -29,7 +27,6 @@ async def pmpermit_func(answers):
             callback_data='engine_pm_none',
         ),
     )
-    random.shuffle(button)
     answers.append(
         InlineQueryResultArticle(
             title='Engine pm',

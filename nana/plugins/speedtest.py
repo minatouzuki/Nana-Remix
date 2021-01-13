@@ -10,7 +10,6 @@ from nana import COMMAND_PREFIXES
 from nana import setbot
 from nana.languages.strings import tld
 from nana.utils.Pyroutils import ReplyCheck
-from nana.plugins.assistant.raw import bot
 
 
 def speedtest_callback(_, __, query):
@@ -35,7 +34,7 @@ def speed_convert(size):
 @setbot.on_callback_query(speedtest_create)
 async def speedtestxyz_callback(client, query):
     if query.from_user.id in AdminSettings:
-        await bot.edit_inline_text(
+        await client.edit_inline_text(
             query.inline_message_id, tld('speed_test_running'),
         )
         speed = speedtest.Speedtest()
@@ -51,7 +50,7 @@ async def speedtestxyz_callback(client, query):
                     speedtest_image,
                 )
             )
-            await bot.edit_inline_text(
+            await client.edit_inline_text(
                 query.inline_message_id,
                 replym,
                 parse_mode='markdown',
@@ -74,7 +73,7 @@ async def speedtestxyz_callback(client, query):
                 )
             )
             replymsg += f"\n - {tld('speed_test_ping')} `{result['ping']}`"
-            await bot.edit_inline_text(
+            await client.edit_inline_text(
                 query.inline_message_id, replymsg,
             )
 

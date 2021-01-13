@@ -10,6 +10,7 @@ import requests
 import tracemoepy
 from bs4 import BeautifulSoup
 from pyrogram import filters
+import aiohttp
 
 from nana import AdminSettings
 from nana import app
@@ -193,36 +194,36 @@ async def tracemoe_rs(client, message):
                 await asyncio.sleep(5)
                 await message.delete()
                 return
-        if dis_loc:
-            tracemoe = tracemoepy.async_trace.Async_Trace()
-            if message_.video:
-                search = await tracemoe.search(img_file, upload_file=True)
-                os.remove(img_file)
-            else:
-                search = await tracemoe.search(dis_loc, upload_file=True)
-            os.remove(dis_loc)
-            result = search['docs'][0]
-            ms_g = (
-                f"**Title**: {result['title_english']}"
-                f"\n**Similarity**: {result['similarity']*100}"
-                f"\n**Episode**: {result['episode']}"
-            )
-            preview = await tracemoe.natural_preview(search)
-            with open('preview.mp4', 'wb') as f:
-                f.write(preview)
-            await message.delete()
-            await client.send_video(
-                message.chat.id,
-                'preview.mp4',
-                caption=ms_g,
-                reply_to_message_id=ReplyCheck(message),
-            )
-            await asyncio.sleep(5)
-            await message.delete()
-            os.remove('preview.mp4')
+        session = aiohttp.ClientSession()
+        tracemoe = tracemoepy.AsyncTrace(session=session)
+        if message_.video:
+            search = await tracemoe.search(img_file, upload_file=True)
+            os.remove(img_file)
         else:
-            await message.delete()
-            return
+            search = await tracemoe.search(dis_loc, upload_file=True)
+        os.remove(dis_loc)
+        result = search['docs'][0]
+        ms_g = (
+            f"**Title**: {result['title_english']}"
+            f"\n**Similarity**: {result['similarity']*100}"
+            f"\n**Episode**: {result['episode']}"
+        )
+        preview = await tracemoe.natural_preview(search)
+        with open('preview.mp4', 'wb') as f:
+            f.write(preview)
+        await message.delete()
+        await client.send_video(
+            message.chat.id,
+            'preview.mp4',
+            caption=ms_g,
+            reply_to_message_id=ReplyCheck(message),
+        )
+        await asyncio.gather(
+            tracemoe.aio_session.close(),
+            asyncio.sleep(5),
+            message.delete(),
+        )
+        os.remove('preview.mp4')
     else:
         await edit_or_reply(message, text='`Reply to a message to proceed`')
         await asyncio.sleep(5)

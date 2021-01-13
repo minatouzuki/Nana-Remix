@@ -1,0 +1,100 @@
+# Language
+language_switch_success_pm: Dil tercihin {} olarak ayarlandı!
+language_not_supported: "{} henüz desteklenmiyor!"
+language_code_not_valid: Bu geçerli bir dil kodu değil. Uluslararası kabul edilen bir ISO kodu kullanın!
+language_current_locale: "Dil Kullanılıyor: **{}**"
+language_select_language: "**Dil seç** \n"
+language_btn: "Language"
+# Assistant Help
+inline_help_text: "**Inline Kılavuz**\nMesaj kutusuna sadece `@{} (komut)` yaz ve yanıt için bekle.\n\n──「 **Inline'dan not al** 」──\n-> `note (*note tagı)`\nVe inline notların listesini bekle, Şu anda sadece text ve buton destekliyor.\n\n──「 **Inline Havalı Text Oluşturucu** 」──\n-> `stylish (yazın)`\nBir metni havalı yazıya dönüştürme, Herhangi bir yerde kullanılabilir!\n\n* = İsteğe bağlı olarak kullanılabilir"
+start_message: "Merhaba {},\nNana Hizmetine hazır!\n===================\n-> Python: `{}`\n-> Userbot: `{} (v{})`\n-> Asistan: `Çalışıyor (v{})`\n-> Database: `{}`\n-> Gruba Katıldı: `{}`\n===================\n`Bot hakkında daha fazla bilgi için aşağıda ki butona tıklayın`"
+help_btn: "Yardım"
+help_str: "Userbotunda komutları çalıştırmak için {} kullanabilirsin.\nIşte sahip olduğunuz modüller\nMevcut ana komutlar:\n - /start: Bot durumunu söyler\n - /stats: Userbot istatistiklerini yazar\n - /settings: Userbot ayarlarınız\n - /getme: Userbot profil bilgilerinizi alır\n - /help: Bu menüyü getirir."
+alive_str: "**[Nana-Remix](https://github.com/pokurt/Nana-Remix):**\n - **Bot**: `{} (v{})`\n - **Pyrogram**: `{}`\n - **Python**: `{}`\n - **Database**: `{}`\n"
+# Gdrive Assistant
+gdrive_credential_err_heroku: "Merhaba, Görünüşe göre Google Drive'a giriş yapmadın 🙂 Giriş yapmana yardımcı olabilirim.\nIlk önce, Google Drive API'ni etkinleştirmen lazım\n1. [Buraya Tıkla](https://developers.google.com/drive/api/v3/quickstart/python),\nDrive API'ni etkinleştirmek için tıkla\n2. Google Hesabına giriş yap (Daha önce giriş yaptıysan atla)\n3. Giriş yaptıktan sonra, Drive API'yi etkinleştire tekrar tıkla,\nve Kullanıcı Konfigürasyonunu indir butonuna tıklayın, indirin.\n4. Dosyayı indirdikten sonra, dosyayı açın, hepsini kopyalayın ve dashboard.heroku.com'e girin, \nUygulamanı seç ve ayarlara gir, config vars'a gir Key'e gdrive_credentials, Value'ye kimliği giriniz.\nBundan sonra, bir sonra ki rehbere /gdrive yazarak gidebilirsiniz."
+# Adminlist Module
+# Adminlist
+adminlist_one: "**{} Grubunda ki yöneticiler**\n╒═══「 Sahip 」\n"
+adminlist_two: "╞══「 {} Kullanıcı Administrator 」\n"
+adminlist_three: "╞══「 {} Bot Administrator 」\n"
+adminlist_four: "╘══「 Toplam {} Yönetici 」"
+# ReportAdmins
+reportadmins_one: "{} yöneticilere bildirildi."
+reportadmins_two: "{} grubundaki yöneticiler çağırılıyor."
+# tagall
+tagall: "Herkese Selam!"
+# botlist
+botlist_one: "☠️ Silinen hesap"
+botlist_two: "**{} grubundaki tüm botlar**\n"
+botlist_three: "╒═══「 Botlar 」\n"
+botlist_four: "╘══「 Toplam {} Bot 」"
+# Admins Module
+# errors
+user_invalid: "`Geçersiz kullanıcı adı`"
+peer_invalid: "`Geçersiz kullanıcı adı veya id`"
+id_invalid: "`Geçersiz kullanıcı id'si`"
+denied_permission: "`Yeterli izni alamadım!`"
+# Invite_link
+invite_link: "**{} grubu için Davet linki oluşturuldu:**\n - **Davet Linki:** {}"
+# pin_message
+pin_message: "`Sabitlemek için bir mesaja yanıt verin`"
+# mute
+mute_user: "`Bir kullanıcıyı susturmak için kullanıcıya yanıt verin`"
+# unmute
+unmute_user: "`Bir kullanıcının sesini açmak için kullanıcıya yanıt verin`"
+# kick
+kick_user: "`Gruptan atmak için bir kullanıcıya yanıt verin`"
+# ban
+ban_user: "`Gruptan yasaklamak için bir kullanıcıya yanıt verin.`"
+# unban
+unban_user: "`Yasağını kaldırmak için bir kullanıcıya yanıt verin`"
+# promote
+promote_user: "`Yetkilendirmek için bir kullanıcıya yanıt verin`"
+# demote
+demote_user: "`Bir kullanıcının yetkisini düşürmek için kullanıcıya yanıt verin.`"
+# lock
+lock_all: "`Bu gruptaki her şey kilitlendi!`"
+lock_chat: "`{} bu grup için kilitlendi!`"
+# Unlock
+unlock_all: "`UBu gruptaki kilitler kaldırıldı!`"
+unlock_invalid: "`Geçersiz kilit tipi!`"
+unlock_chat: "`Bu grup için {} kilidi açıldı!`"
+# viewlocks
+permission_view_str: "<b>Grup Yetkileri:</b>\n<b>Mesaj gönderme:</b> {}\n<b>Medya gönderme:</b> {}\n<b>Sticker gönderme:</b> {}\n<b>Animasyon gönderme:</b> {}\n<b>Oyun oynayabilir:</b> {}\n<b>Inline Bot kullanabilir :</b> {}\n<b>Web sayfası önizlemesi:</b> {}\n<b>Anket gönderme:</b> {}\n<b>Bilgileri düzenleme:</b> {}\n<b>Kullanıcı davet etme:</b> {}\n<b>Mesaj sabitleme:</b> {}\n"
+# SpeedTest Module
+# Speed-Test
+speed_test_trigger: "SpeedTest modu seçin"
+speed_test_running: "Speedtest çalışıyor...."
+# Gdrive Assistant
+gdrive_credential_err: "Merhaba, Görünüşe göre Google Drive'a giriş yapmadın 🙂 Giriş yapmana yardımcı olabilirim.\nIlk önce, Google Drive API'ni etkinleştirmen lazım\n1. [Buraya Tıkla](https://developers.google.com/drive/api/v3/quickstart/python),\nDrive API'ni etkinleştirmek için tıkla\n2. Google Hesabına giriş yap (Daha önce giriş yaptıysan atla)\n3. Giriş yaptıktan sonra, Drive API'yi etkinleştire tekrar tıkla,\nve Kullanıcı Konfigürasyonunu indir butonuna tıklayın, indirin.\n4. Dosyayı indirdikten sonra, dosyayı açın, hepsini kopyalayın ve Telegram'a girip .credentials yazın (dosyadaki içeriği kopyalayın) paranteze almadan yapın\n \nBundan sonra, bir sonraki rehbere gitmek için /gdrive yazın"
+# Settings Module
+settings_userbot_stop: "-> Userbot: `Durduruldu (v{})`\n"
+settings_userbot_running: "-> Userbot: `Çalışıyor (v{})`\n"
+settings_assistant_running: "-> Asistan: `Çalışıyor (v{})`\n"
+settings_database: "-> Database: `{}`\n"
+settings_python: "-> Python: `{}`\n"
+settings_userbot_stopbutton: "Botu durdur"
+settings_userbot_startbutton: "Botu başlat"
+settings_userbot_restartbutton: "Botu yeniden başlat"
+settings_setstickerbutton: "Sticker ayarla"
+settings_change_repo_button: "Repo kaynağını değiştir"
+settings_stats_botstart: "\n✅ Bot başlatıldı!"
+settings_stats_botstop: "\n❎ Bot durduruldu!"
+settings_stats_botrestart: "\n✅ Bot yeniden başlatıldı!"
+settings_bot_stoprestart_err: "Userbot zaten durduruldu! Yeniden başlatma başarısız"
+settings_bot_restarting: "Lütfen botun yeniden başlatılmasını bekleyin..."
+speed_test_result: "**SpeedTest sonuçları:**"
+speed_test_isp: "**ISP:**"
+speed_test_download: "**Download:**"
+speed_test_upload: "**Upload:**"
+speed_test_ping: "**Ping:**"
+speed_test_button_text: "Yazı"
+speed_test_button_image: "Fotoğraf"
+# Updater
+updater_available_text: "**[{}] için YENI GÜNCELLEME mevcut!**\n\n"
+update_now_btn: "🔄 Şimdi güncelle!"
+update_successful: "**Başarıyla güncellendi!**\n"
+update_welcome: "🎉 Nana Bot'a hoşgeldin v{} & Asistan v{}\n"
+updated_changelog: "\n──「 **Güncelleme günlükleri** 」──\n"
+update_successful_force: "Zorla güncelleme başarıyla tamamlandı!"

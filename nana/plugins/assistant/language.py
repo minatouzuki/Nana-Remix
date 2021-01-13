@@ -22,7 +22,7 @@ language_button_create = filters.create(language_button_callback)
 @setbot.on_callback_query(language_button_create)
 async def locale_button(_, query):
     lang_match = re.findall(
-        r'en-US|hi|he|id|fa|el|dv|es|ja|de|ta|pt-br|ar|ku',
+        r'en-US|hi|he|id|fa|el|dv|es|ja|de|ta|pt-br|ar|ku|tr',
         query.data,
     )
     if lang_match:
@@ -65,6 +65,7 @@ async def locale_button(_, query):
         InlineKeyboardButton('BR 🇧🇷', callback_data='set_lang_pt-br'),
         InlineKeyboardButton('AR 🇸🇦', callback_data='set_lang_pt-ar'),
         InlineKeyboardButton('CKB ☀️', callback_data='set_lang_pt-ku'),
+        InlineKeyboardButton('TR 🇹🇷', callback_data='set_lang_pt-tr'),
     ),
     buttons.row(
         InlineKeyboardButton('◀️', callback_data='language_back'),

@@ -4,11 +4,11 @@
 
 ## Userbot + Assistant for Telegram
 
-Currently work fine perfectly, but some features may give you error. Please report a bug to me if you facing any issues.
+A Modular Pyrogram Based Userbot with an Assitant
 
 ## Installation Guide
 
-See our documentation to get [Installation Guide](https://aman-a.gitbook.io/nana-remix).
+See our documentation to get [Installation Guide](https://nana.pokurt.me).
 
 ## Community
 
@@ -17,10 +17,9 @@ community will answer you some questions.
 
 ### Credits
 
-- [Userge-X](https://github.com/code-rgb/USERGE-X)
-- [Ayra Hikari](https://github.com/AyraHikari)
-- [LegenHand](https://github.com/legenhand)
-- [RealAkito](https://github.com/RealAkito)
+- [Ayra Hikari](https://github.com/AyraHikari) - For the Base of this Awesome Userbot
+- [LegenHand](https://github.com/legenhand) - Keeping the project Alive
+- [RealAkito](https://github.com/RealAkito) - Translation Engine
 
 ### Translators
 
@@ -31,3 +30,4 @@ community will answer you some questions.
 - [spkal01](https://github.com/spkal01) - Greek & English
 - [NachABR](https://github.com/NachABR) - Spanish
 - [rojserbest](https://github.com/rojserbest) - Kurdish
+- [SelaxG](https://github.com/SelaxG) - Turkish
